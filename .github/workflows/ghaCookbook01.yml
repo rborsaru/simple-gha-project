@@ -1,6 +1,6 @@
 # A first workflow to play around with the editor
 name: GHA Cookbook first workflow
-on: 
+on:
   push:
     branches:
       -main
