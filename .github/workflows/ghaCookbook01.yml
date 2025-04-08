@@ -2,7 +2,8 @@
 name: GHA Cookbook first workflow
 on: 
   push:
-    -main
+    branches:
+      -main
   workflow_dispatch:
 jobs:
   first_job:
