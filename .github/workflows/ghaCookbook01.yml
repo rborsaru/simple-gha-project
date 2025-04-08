@@ -1,10 +1,12 @@
 # A first workflow to play around with the editor
 name: GHA Cookbook first workflow
+
 on:
   push:
     branches:
       -main
   workflow_dispatch:
+
 jobs:
   first_job:
     name: My first job
