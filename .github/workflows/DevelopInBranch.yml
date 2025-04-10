@@ -1,3 +1,4 @@
+# workflow to run actionlint
 name: Develop in a branch
 on: [pull_request, workflow_dispatch]
 jobs:
@@ -8,3 +9,11 @@ jobs:
           echo "Workflow triggered in branch '${{ github.ref }}'."
           echo "Workflow triggered by event '${{ github.event_name }}'."
           echo "Workflow triggered by actor '${{ github.actor }}'."
+  run-actionlint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4 # v4
+      - uses: devops-actions/actionlint@e7ee33fbf5aa8c9f9ee1145137f3e52e25d6a35b #v0.1.3
